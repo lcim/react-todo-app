@@ -1,0 +1,13 @@
+import React from "react"
+import TodoItem from "./TodoItem"
+
+const TodoList = (props) => {
+    return (
+        <ul> {props.adidos.map(todo => (
+            <TodoItem
+                key={todo.id} adikatodo={todo} handleChangePro2={props.handleChangePro1} deleteTodoProp2={props.deleteTodoProp1}
+                setUpdate={props.setUpdate}
+            />))}
+        </ul>); // I just named the prop adikatodo. This name will be used to pass the state to the child component, TodoItem
+}
+export default TodoList
